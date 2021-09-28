@@ -1,0 +1,28 @@
+PODS:
+  - FlagPhoneNumber (0.8.0):
+    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
+  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - LGSideMenuController (3.1.2)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+
+DEPENDENCIES:
+  - FlagPhoneNumber
+  - LGSideMenuController
+  - NVActivityIndicatorView
+
+SPEC REPOS:
+  trunk:
+    - FlagPhoneNumber
+    - LGSideMenuController
+    - NVActivityIndicatorView
+
+SPEC CHECKSUMS:
+  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
+  LGSideMenuController: 0c7b155b0dbdf14bf8b88d5ac363c5fe1584bb23
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+
+PODFILE CHECKSUM: 1a8bf1eba793b98d1822b70ba467e974c9c60575
+
+COCOAPODS: 1.11.2
