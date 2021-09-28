@@ -690,19 +690,65 @@
         <!--My Music-->
         <scene sceneID="dk2-d6-HbG">
             <objects>
-                <tableViewController id="E0k-FH-8wS" sceneMemberID="viewController">
+                <tableViewController id="E0k-FH-8wS" customClass="MyMusicTV" customModule="newproject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x1U-cB-Vim">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fyU-F6-PV3">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyMusicCell" rowHeight="95" id="fyU-F6-PV3" customClass="MyMusicCell" customModule="newproject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fyU-F6-PV3" id="diE-w0-uDU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUG-Sa-Acf">
+                                            <rect key="frame" x="109" y="16" width="79.5" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="Xer-2n-ki8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5w-26-aWD">
+                                            <rect key="frame" x="109" y="56" width="199" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="IaK-6e-hIw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hq8-vE-Eg3">
+                                            <rect key="frame" x="20" y="11" width="81" height="73"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="73" id="BKe-C6-oii"/>
+                                                <constraint firstAttribute="width" constant="81" id="TKg-zQ-nag"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="U5w-26-aWD" firstAttribute="leading" secondItem="LUG-Sa-Acf" secondAttribute="leading" id="8IG-aw-ssE"/>
+                                        <constraint firstItem="hq8-vE-Eg3" firstAttribute="leading" secondItem="diE-w0-uDU" secondAttribute="leadingMargin" id="8xA-1X-LgK"/>
+                                        <constraint firstItem="LUG-Sa-Acf" firstAttribute="centerX" secondItem="U5w-26-aWD" secondAttribute="centerX" constant="-59.75" id="Aap-eg-YIP"/>
+                                        <constraint firstItem="U5w-26-aWD" firstAttribute="top" secondItem="LUG-Sa-Acf" secondAttribute="bottom" constant="8" id="KaR-fi-rHz"/>
+                                        <constraint firstItem="LUG-Sa-Acf" firstAttribute="top" secondItem="diE-w0-uDU" secondAttribute="top" constant="16" id="OeA-7e-ymS"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LUG-Sa-Acf" secondAttribute="trailing" constant="20" symbolic="YES" id="ZnS-fh-6UN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="U5w-26-aWD" secondAttribute="bottom" constant="7" id="ZpX-Vd-1l7"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U5w-26-aWD" secondAttribute="trailing" constant="20" symbolic="YES" id="dVz-bc-KDW"/>
+                                        <constraint firstItem="hq8-vE-Eg3" firstAttribute="top" secondItem="diE-w0-uDU" secondAttribute="topMargin" id="hi2-En-DIx"/>
+                                        <constraint firstItem="hq8-vE-Eg3" firstAttribute="bottom" secondItem="diE-w0-uDU" secondAttribute="bottomMargin" id="pPe-vI-cdU"/>
+                                        <constraint firstAttribute="bottom" secondItem="U5w-26-aWD" secondAttribute="bottom" constant="18" id="pjq-kb-S8r"/>
+                                        <constraint firstItem="LUG-Sa-Acf" firstAttribute="leading" secondItem="hq8-vE-Eg3" secondAttribute="trailing" constant="8" symbolic="YES" id="veq-S6-Mko"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categorytext" destination="U5w-26-aWD" id="ogJ-UQ-0xI"/>
+                                    <outlet property="musictitleimage" destination="hq8-vE-Eg3" id="yiB-R7-jhg"/>
+                                    <outlet property="titletext" destination="LUG-Sa-Acf" id="Cdp-am-wa1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -714,7 +760,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1W2-9D-Tav" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3658" y="392"/>
+            <point key="canvasLocation" x="3657.971014492754" y="391.74107142857139"/>
         </scene>
         <!--Browse-->
         <scene sceneID="aqf-XH-4Ru">
@@ -783,7 +829,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xBF-oU-doq" customClass="LaunchProgressView" customModule="God_Music" customModuleProvider="target">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xBF-oU-doq" customClass="LaunchProgressView" customModule="newproject" customModuleProvider="target">
                                 <rect key="frame" x="60" y="628" width="294" height="4"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="Rwy-Zc-h1c"/>

@@ -23,6 +23,8 @@
 		5216B88526FB0EAE001DB016 /* HomeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216B88426FB0EAE001DB016 /* HomeTableController.swift */; };
 		5216B88826FB3002001DB016 /* HomeTrendingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216B88726FB3002001DB016 /* HomeTrendingTableCell.swift */; };
 		5216B88A26FB30D6001DB016 /* hometrendcollcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216B88926FB30D6001DB016 /* hometrendcollcell.swift */; };
+		529CE3912703252200D7A4A2 /* MyMusicTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529CE3902703252200D7A4A2 /* MyMusicTV.swift */; };
+		529CE393270326BA00D7A4A2 /* MyMusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529CE392270326BA00D7A4A2 /* MyMusicCell.swift */; };
 		52DD267B2701E41500E9AFC2 /* IntialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD267A2701E41500E9AFC2 /* IntialViewController.swift */; };
 		D9029FDCDCF40C1377E70E7D /* Pods_newproject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9289175D0F7EE6B44B9629 /* Pods_newproject.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		5216B88426FB0EAE001DB016 /* HomeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableController.swift; sourceTree = "<group>"; };
 		5216B88726FB3002001DB016 /* HomeTrendingTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrendingTableCell.swift; sourceTree = "<group>"; };
 		5216B88926FB30D6001DB016 /* hometrendcollcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hometrendcollcell.swift; sourceTree = "<group>"; };
+		529CE3902703252200D7A4A2 /* MyMusicTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMusicTV.swift; sourceTree = "<group>"; };
+		529CE392270326BA00D7A4A2 /* MyMusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMusicCell.swift; sourceTree = "<group>"; };
 		52DD267A2701E41500E9AFC2 /* IntialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntialViewController.swift; sourceTree = "<group>"; };
 		536BEBA5A1FBB4EB0DEE325F /* Pods_newprojectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newprojectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F38B203EE849ACD0A3CB2E6 /* Pods-newproject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newproject.release.xcconfig"; path = "Target Support Files/Pods-newproject/Pods-newproject.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				5216B85526FAEE25001DB016 /* LaunchScreen.storyboard */,
 				5216B85826FAEE25001DB016 /* Info.plist */,
 				5216B84E26FAEE23001DB016 /* ViewController.swift */,
+				529CE3902703252200D7A4A2 /* MyMusicTV.swift */,
+				529CE392270326BA00D7A4A2 /* MyMusicCell.swift */,
 				5216B87C26FAFBA2001DB016 /* signuptvcontroller.swift */,
 				5216B88426FB0EAE001DB016 /* HomeTableController.swift */,
 				5216B88026FB07FA001DB016 /* bannercell.swift */,
@@ -442,9 +448,11 @@
 				5216B88126FB07FA001DB016 /* bannercell.swift in Sources */,
 				52DD267B2701E41500E9AFC2 /* IntialViewController.swift in Sources */,
 				5216B84F26FAEE23001DB016 /* ViewController.swift in Sources */,
+				529CE3912703252200D7A4A2 /* MyMusicTV.swift in Sources */,
 				5216B84B26FAEE23001DB016 /* AppDelegate.swift in Sources */,
 				5216B84D26FAEE23001DB016 /* SceneDelegate.swift in Sources */,
 				5216B87D26FAFBA2001DB016 /* signuptvcontroller.swift in Sources */,
+				529CE393270326BA00D7A4A2 /* MyMusicCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
