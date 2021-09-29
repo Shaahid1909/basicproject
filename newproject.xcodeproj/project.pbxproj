@@ -28,6 +28,9 @@
 		5246175327043E4700B6A7AA /* AlbumsTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246175227043E4700B6A7AA /* AlbumsTV.swift */; };
 		5246175527043F1300B6A7AA /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246175427043F1300B6A7AA /* AlbumCell.swift */; };
 		5246175727043FF000B6A7AA /* AlbumImageview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246175627043FF000B6A7AA /* AlbumImageview.swift */; };
+		52461759270465B800B6A7AA /* libraryviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52461758270465B800B6A7AA /* libraryviewController.swift */; };
+		5246175B270466A600B6A7AA /* popviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246175A270466A600B6A7AA /* popviewcontroller.swift */; };
+		5246175D270467B400B6A7AA /* libraryviewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246175C270467B400B6A7AA /* libraryviewcell.swift */; };
 		529CE3912703252200D7A4A2 /* MyMusicTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529CE3902703252200D7A4A2 /* MyMusicTV.swift */; };
 		529CE393270326BA00D7A4A2 /* MyMusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529CE392270326BA00D7A4A2 /* MyMusicCell.swift */; };
 		52DD267B2701E41500E9AFC2 /* IntialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DD267A2701E41500E9AFC2 /* IntialViewController.swift */; };
@@ -80,6 +83,9 @@
 		5246175227043E4700B6A7AA /* AlbumsTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTV.swift; sourceTree = "<group>"; };
 		5246175427043F1300B6A7AA /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		5246175627043FF000B6A7AA /* AlbumImageview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumImageview.swift; sourceTree = "<group>"; };
+		52461758270465B800B6A7AA /* libraryviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryviewController.swift; sourceTree = "<group>"; };
+		5246175A270466A600B6A7AA /* popviewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popviewcontroller.swift; sourceTree = "<group>"; };
+		5246175C270467B400B6A7AA /* libraryviewcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryviewcell.swift; sourceTree = "<group>"; };
 		529CE3902703252200D7A4A2 /* MyMusicTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMusicTV.swift; sourceTree = "<group>"; };
 		529CE392270326BA00D7A4A2 /* MyMusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMusicCell.swift; sourceTree = "<group>"; };
 		52DD267A2701E41500E9AFC2 /* IntialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntialViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +193,9 @@
 				5246175227043E4700B6A7AA /* AlbumsTV.swift */,
 				5246175627043FF000B6A7AA /* AlbumImageview.swift */,
 				5246175427043F1300B6A7AA /* AlbumCell.swift */,
+				52461758270465B800B6A7AA /* libraryviewController.swift */,
+				5246175A270466A600B6A7AA /* popviewcontroller.swift */,
+				5246175C270467B400B6A7AA /* libraryviewcell.swift */,
 			);
 			path = newproject;
 			sourceTree = "<group>";
@@ -458,6 +467,7 @@
 			files = (
 				5216B88526FB0EAE001DB016 /* HomeTableController.swift in Sources */,
 				5216B88326FB0DA3001DB016 /* BannerCollectionViewCell.swift in Sources */,
+				52461759270465B800B6A7AA /* libraryviewController.swift in Sources */,
 				5216B88A26FB30D6001DB016 /* hometrendcollcell.swift in Sources */,
 				5216B88826FB3002001DB016 /* HomeTrendingTableCell.swift in Sources */,
 				5216B88126FB07FA001DB016 /* bannercell.swift in Sources */,
@@ -465,7 +475,9 @@
 				5216B84F26FAEE23001DB016 /* ViewController.swift in Sources */,
 				5246175727043FF000B6A7AA /* AlbumImageview.swift in Sources */,
 				529CE3912703252200D7A4A2 /* MyMusicTV.swift in Sources */,
+				5246175B270466A600B6A7AA /* popviewcontroller.swift in Sources */,
 				5246175327043E4700B6A7AA /* AlbumsTV.swift in Sources */,
+				5246175D270467B400B6A7AA /* libraryviewcell.swift in Sources */,
 				5216B84B26FAEE23001DB016 /* AppDelegate.swift in Sources */,
 				5216B84D26FAEE23001DB016 /* SceneDelegate.swift in Sources */,
 				5246175527043F1300B6A7AA /* AlbumCell.swift in Sources */,
