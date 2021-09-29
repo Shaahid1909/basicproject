@@ -18,18 +18,12 @@ class MyMusicTV: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+      
     }
-
-    // MARK: - Table view data source
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+  
         return image.count
     }
 
@@ -48,6 +42,23 @@ class MyMusicTV: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let indexPath = tableView.indexPathForSelectedRow
+        let currentCell = tableView.cellForRow(at: indexPath!) as! MyMusicCell
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "didselect") as! DetailMusicTV
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.passSong = currentCell.titletext.text ?? ""
+        viewController.passCategory = currentCell.categorytext.text ?? ""
+       // self.pushViewController(viewController, animated: true , completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+        
+    }
 
-
+    
 }

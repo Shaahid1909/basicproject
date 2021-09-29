@@ -650,8 +650,8 @@
                     <connections>
                         <segue destination="fW5-zs-BST" kind="relationship" relationship="viewControllers" id="fxa-l5-Evn"/>
                         <segue destination="Fb4-qX-qlD" kind="relationship" relationship="viewControllers" id="5tk-aZ-PIm"/>
-                        <segue destination="E0k-FH-8wS" kind="relationship" relationship="viewControllers" id="V7B-dz-giw"/>
-                        <segue destination="cXT-8z-rGq" kind="relationship" relationship="viewControllers" id="jaj-6N-d1q"/>
+                        <segue destination="VZD-qC-Gcl" kind="relationship" relationship="viewControllers" id="V7B-dz-giw"/>
+                        <segue destination="rFG-8b-5H2" kind="relationship" relationship="viewControllers" id="jaj-6N-d1q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sr7-kl-KPQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -756,28 +756,46 @@
                             <outlet property="delegate" destination="E0k-FH-8wS" id="d5T-gx-f4G"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="My Music" image="music.note.list" catalog="system" selectedImage="music.note.list" id="0j3-eX-3o7"/>
+                    <navigationItem key="navigationItem" title="My Music" id="rdS-do-rPv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1W2-9D-Tav" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3657.971014492754" y="391.74107142857139"/>
+            <point key="canvasLocation" x="4568.115942028986" y="391.74107142857139"/>
         </scene>
-        <!--Browse-->
+        <!--My Album-->
         <scene sceneID="aqf-XH-4Ru">
             <objects>
-                <tableViewController id="cXT-8z-rGq" sceneMemberID="viewController">
+                <tableViewController id="cXT-8z-rGq" customClass="AlbumsTV" customModule="newproject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rda-dm-zuR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="I04-vy-GdG">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagecell" rowHeight="158" id="I04-vy-GdG" customClass="AlbumCell" customModule="newproject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="158"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I04-vy-GdG" id="xCF-hy-Hhd">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6K7-Zu-s3z">
+                                            <rect key="frame" x="20" y="11" width="128" height="136"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="136" id="898-uB-m0K"/>
+                                                <constraint firstAttribute="width" constant="128" id="sxA-wC-csq"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6K7-Zu-s3z" firstAttribute="leading" secondItem="xCF-hy-Hhd" secondAttribute="leadingMargin" id="Lzm-fM-gic"/>
+                                        <constraint firstItem="6K7-Zu-s3z" firstAttribute="top" secondItem="xCF-hy-Hhd" secondAttribute="topMargin" id="aqt-sI-26u"/>
+                                        <constraint firstItem="6K7-Zu-s3z" firstAttribute="bottom" secondItem="xCF-hy-Hhd" secondAttribute="bottomMargin" id="f8W-3Q-au9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6K7-Zu-s3z" secondAttribute="trailing" constant="246" id="fVZ-nK-Y7b"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="albumimage" destination="6K7-Zu-s3z" id="m4L-3q-2of"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -785,11 +803,41 @@
                             <outlet property="delegate" destination="cXT-8z-rGq" id="EI9-QE-40i"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Browse" image="calendar.badge.plus" catalog="system" id="SUS-xa-40D"/>
+                    <navigationItem key="navigationItem" title="My Album" id="cUf-pS-UvZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwe-Uv-MQ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1741" y="1103"/>
+            <point key="canvasLocation" x="2650.7246376811595" y="1102.2321428571429"/>
+        </scene>
+        <!--Album Imageview-->
+        <scene sceneID="g6V-nd-mbt">
+            <objects>
+                <viewController storyboardIdentifier="imageview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="j61-Iv-ShO" customClass="AlbumImageview" customModule="newproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UJS-U7-F0l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="feX-hB-Xbf">
+                                <rect key="frame" x="20" y="73" width="374" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kVa-Cb-8hc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="feX-hB-Xbf" firstAttribute="leading" secondItem="kVa-Cb-8hc" secondAttribute="leading" constant="20" id="DTN-gw-KJf"/>
+                            <constraint firstItem="feX-hB-Xbf" firstAttribute="top" secondItem="kVa-Cb-8hc" secondAttribute="top" constant="29" id="M1g-38-FAx"/>
+                            <constraint firstItem="kVa-Cb-8hc" firstAttribute="trailing" secondItem="feX-hB-Xbf" secondAttribute="trailing" constant="20" id="QRI-zr-H25"/>
+                            <constraint firstItem="feX-hB-Xbf" firstAttribute="centerX" secondItem="UJS-U7-F0l" secondAttribute="centerX" id="UXN-cO-vfp"/>
+                            <constraint firstItem="kVa-Cb-8hc" firstAttribute="bottom" secondItem="feX-hB-Xbf" secondAttribute="bottom" constant="15" id="vvT-OH-UtY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImage" destination="feX-hB-Xbf" id="18S-X6-Y9C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMJ-I9-FJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3465.217391304348" y="1094.8660714285713"/>
         </scene>
         <!--Home-->
         <scene sceneID="wOD-wq-xkx">
@@ -869,9 +917,106 @@
             </objects>
             <point key="canvasLocation" x="-1452.1739130434785" y="38.839285714285715"/>
         </scene>
+        <!--Detail MusicTV-->
+        <scene sceneID="gp6-OQ-tZh">
+            <objects>
+                <tableViewController storyboardIdentifier="didselect" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o2H-wa-CkN" customClass="DetailMusicTV" customModule="newproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DPP-TJ-IXe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="GPa-NQ-2gb">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMI-UA-LrJ">
+                                    <rect key="frame" x="30" y="31" width="169" height="46"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="169" id="cAq-GX-I6G"/>
+                                        <constraint firstAttribute="height" constant="46" id="lGI-vi-qc4"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C5-7W-DIA">
+                                    <rect key="frame" x="33" y="76" width="81" height="31"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="31" id="Pkv-gb-eVU"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="xMI-UA-LrJ" firstAttribute="leading" secondItem="GPa-NQ-2gb" secondAttribute="leadingMargin" constant="22" id="Dxe-h1-TZI"/>
+                                <constraint firstItem="xMI-UA-LrJ" firstAttribute="top" secondItem="GPa-NQ-2gb" secondAttribute="top" constant="31" id="QgL-bH-gYN"/>
+                                <constraint firstItem="1C5-7W-DIA" firstAttribute="leading" secondItem="xMI-UA-LrJ" secondAttribute="leading" constant="3" id="Tp5-Db-FhF"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1C5-7W-DIA" secondAttribute="trailing" constant="20" symbolic="YES" id="XJL-Mb-GeU"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xMI-UA-LrJ" secondAttribute="trailing" constant="20" symbolic="YES" id="iqy-F8-GVY"/>
+                                <constraint firstAttribute="bottom" secondItem="1C5-7W-DIA" secondAttribute="bottom" constant="18" id="wo5-lo-B9D"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="o2H-wa-CkN" id="cfx-d4-f0t"/>
+                            <outlet property="delegate" destination="o2H-wa-CkN" id="inf-2q-MDI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="EuZ-4y-4LP"/>
+                    <connections>
+                        <outlet property="categorytitle" destination="1C5-7W-DIA" id="goD-Xe-HX5"/>
+                        <outlet property="songtitle" destination="xMI-UA-LrJ" id="U18-Ww-kwJ"/>
+                        <segue destination="VZD-qC-Gcl" kind="presentation" identifier="backtomusic" modalPresentationStyle="overFullScreen" id="y4F-Py-aXy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0x-fc-HR2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5557" y="406"/>
+        </scene>
+        <!--My Music-->
+        <scene sceneID="hg4-NC-g1K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VZD-qC-Gcl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Music" image="music.note.list" catalog="system" selectedImage="music.note.list" id="0j3-eX-3o7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="czS-OS-SU1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="E0k-FH-8wS" kind="relationship" relationship="rootViewController" id="tQo-s1-c6q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVu-He-YhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3657.971014492754" y="391.74107142857139"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="FH8-v5-jka">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rFG-8b-5H2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browse" image="calendar.badge.plus" catalog="system" id="SUS-xa-40D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q51-a1-ros">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cXT-8z-rGq" kind="relationship" relationship="rootViewController" id="XSm-Il-hfh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBq-ST-xh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740.5797101449277" y="1102.2321428571429"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iut-cA-gwf"/>
+        <segue reference="y4F-Py-aXy"/>
+        <segue reference="FgA-sL-chN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="3" width="1344" height="741"/>
